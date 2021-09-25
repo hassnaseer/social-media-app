@@ -1,0 +1,130 @@
+/* Desktop version styling  */
+
+/* Left Section Styling  */
+
+.ls-pi {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.ls-menu {
+    border-bottom: 1px solid #eeee;
+    padding: 10px 0px;
+    transition: all 0.5s;
+}
+
+.ls-menu:hover {
+    background-color: #fcfbfc;
+    border-left: 5px solid blue;
+}
+
+.ls-menu a {
+    display: block;
+}
+
+.ls-menu-icons {
+    font-size: 25px !important;
+    color: #5b6269 !important;
+}
+
+.ls-not-badge {
+    font-size: 12px;
+    background-color: blue;
+    border-radius: 50%;
+    color: white;
+    padding: 5px 10px;
+}
+
+.ls-invitation-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ls-img-text {
+    position: absolute;
+    top: 65%;
+    font-size: 16px;
+    font-weight: 900;
+    left: 5%;
+    color: white;
+}
+
+/* Right Section Styling  */
+
+.rs-fri {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.rs-contacts-li {
+    border-bottom: 1px solid #eeee;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Feed Section Styling  */
+
+.fs-pi {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.fs-input {
+    border: none;
+    padding-left: 20px;
+    outline: none;
+}
+
+.btn-social {
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-social:hover {
+    background-color: #eeee;
+}
+
+/* Mobile version styling   */
+
+.bb-container {
+    background-color: #181818;
+    height: 10vh;
+    border-top: 1px solid #eeee;
+    color: white;
+    border-radius: 30px;
+}
+
+.bb-tab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bb-tabs button {
+    width: 100%;
+    height: 100%;
+}
+
+.bb-active-tab {
+    color: #37a000;
+}
+
+.bb-icons {
+    font-size: 30px !important;
+}

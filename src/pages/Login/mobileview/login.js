@@ -1,12 +1,13 @@
-import React,{ useContext } from "react"
+import React, {useContext, useState} from "react"
 import "./style.css"
 import {useHistory} from "react-router-dom";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {AccountContext} from "../../../components/common/accountcontext";
 
-const Login =({ onConnect = () => {} })=>{
+const Login =()=>{
     const history = useHistory();
+    const [formData, setFormData] = useState()
     const { switchToSignup } = useContext(AccountContext);
     const formik = useFormik({
         initialValues: {
@@ -17,13 +18,13 @@ const Login =({ onConnect = () => {} })=>{
             password: Yup.string().required('Required'),
             email: Yup.string().required('Required'),
         }),
-        onSubmit: async (e,values) => {
-            // alert(JSON.stringify(values))
-            e.preventDefault();
-            const formdata = Object.fromEntries(new FormData(e.target));
-            onConnect(formdata.username, "persistent" in formdata);
-            console.log("formdata",formdata)
-            console.log("values",values)
+        onSubmit: async (values) => {
+            console.log(values)
+            localStorage.setItem('userId', JSON.stringify(values))
+            let data = localStorage.getItem('userId')
+            console.log("data", data)
+            setFormData(data)
+            // history.push("/home")
         },
 
     });

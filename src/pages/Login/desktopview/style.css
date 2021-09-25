@@ -1,0 +1,92 @@
+.form{
+ margin-top: 100px;
+}
+.header{
+    color: rgb(119, 56, 205);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.button{
+    width: 100px;
+    border: 1px solid grey;
+    /*margin-right: 10px;*/
+    margin-top: 20px;
+    padding: 5px;
+}
+.button1{
+    width: 80px;
+    border: 1px solid grey;
+    margin-right: 10px;
+    padding: 5px;
+}
+.button1:hover{
+    color: white;
+    background-color: rgb(119, 56, 205);
+    border-radius: 10px;
+    padding: 5px;
+}
+.button2{
+    width: 100px;
+    color: white;
+    background-color: rgb(120, 58, 205);
+    margin-left: 10px;
+    padding: 5px;
+}
+.button2:hover{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+.title{
+    color: rgb(120, 58, 205);
+    font-size: 30px;
+    font-weight: 900;
+}
+.img{
+    padding: 20px;
+    background-color: rgba(120, 58, 205);
+    border-radius: 50px;
+}
+.img:hover{
+    background: linear-gradient(
+            58deg,
+            rgb(119, 56, 205) 20%,
+            rgba(192, 54, 146) 100%);
+}
+.heading{
+    color: rgb(119, 56, 205);
+    font-size: 24px;
+}
+.text-main{
+    font-size: 84px;
+    font-weight: 900;
+}
+.text-2{
+font-size: 22px;
+}
+.pic{
+    transition: transform .7s ease-in-out;
+    width: 80%;
+    margin-left: 50px;
+}
+.pic:hover{
+    transform: rotate(360deg);
+}
+.button3{
+    width: auto;
+    padding: 10px;
+    background-color: rgb(120, 58, 205);
+    color: white;
+    border-radius: 15px;
+}
+.button3:hover{
+    width: auto;
+    padding: 10px;
+    background-color: white;
+    color: #181818;
+    border-radius: 15px;
+    border: 1px solid #181818;
+}

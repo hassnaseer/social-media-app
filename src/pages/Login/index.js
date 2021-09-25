@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MobileLogin from './mobileview/index';
-// import DesktopLogi from './desktopview';
+import DesktopLogin from './desktopview/index';
 
 const NewsFeed = () => {
 
@@ -26,7 +26,7 @@ const NewsFeed = () => {
 
     return (
         <div>
-            {deviceSize === "desktop" ? <h1>here is desktop vie</h1>:<MobileLogin />}
+            {deviceSize === "desktop" ? <DesktopLogin />:<MobileLogin />}
         </div>
     )
 }

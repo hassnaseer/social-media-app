@@ -7,16 +7,7 @@ import Login from "./pages/Login/index"
 import AppRouter from './config/routes';
 
 function App() {
-  const [connected, setConnected] = useState(false);
-  // const [userId, setUserId] = useState(localStorage.getItem("userId"));
-  // const onConnect = async (userId, persistent) => {
-  //   await connectClient(userId);
-  //   setConnected(true);
-  //   setUserId(userId);
-  //
-  //   if (persistent) localStorage.setItem("userId", userId);
-  // };
-// console.log("the user id data from local storafe",localStorage.getItem("userId"))
+  const [connected, setConnected] = useState(null);
   useEffect(() => {
     const userId = localStorage.getItem("userId");
     // console.log("userid",userId)
@@ -24,10 +15,13 @@ function App() {
   }, [connected]);
   console.log(connected)
   return (
-      // <div className="app">
-      //   {!connected && !connected && <Login />}
-      //   {connected && connected && <NewsFeed />}
-      // </div>
+  //       if ((localStorage.getItem("userName") !== null){
+  //   // you have values for both userName and password
+  // }
+  //     <div className="app">
+  //       {!connected !==null ? <NewsFeed />: <Login />}
+  //       {/*{localStorage.getItem("userName") !== null ? <NewsFeed />}*/}
+  //     </div>
     <AppRouter />
   );
 }

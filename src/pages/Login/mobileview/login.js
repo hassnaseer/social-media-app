@@ -19,11 +19,12 @@ const Login =()=>{
             email: Yup.string().required('Required'),
         }),
         onSubmit: async (values) => {
-            console.log(values)
+            // console.log(values)
             localStorage.setItem('userId', JSON.stringify(values))
             let data = localStorage.getItem('userId')
-            console.log("data", data)
+            // console.log("data", data)
             setFormData(data)
+            history.push("./home")
             // history.push("/home")
         },
 
@@ -51,7 +52,6 @@ const Login =()=>{
                     <a className="mutedlink">Don't have an accoun? <span className="boldlink" onClick={switchToSignup}>Signup</span>
                     </a>
                 </div>
-
             </form>
         </div>
     )

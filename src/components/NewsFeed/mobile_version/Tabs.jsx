@@ -40,7 +40,7 @@ const Tabs = props => {
                     </NavLink>
                 </div>
                 <div className="col-2">
-                    <NavLink to="/notifications" exact className="bb-tab" activeClassName="bb-active-tab">
+                    <NavLink to="/" exact className="bb-tab" activeClassName="bb-active-tab">
                         <NotificationsRoundedIcon className="bb-icons" />
                     </NavLink>
                 </div>

@@ -3,9 +3,9 @@ import "./style.css"
 import {useHistory} from "react-router-dom";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import {AccountContext} from "../../components/common/accountcontext";
+import {AccountContext} from "../../../components/common/accountcontext";
 
-const Login =()=>{
+const Login =({ onConnect = () => {} })=>{
     const history = useHistory();
     const { switchToSignup } = useContext(AccountContext);
     const formik = useFormik({
@@ -17,9 +17,13 @@ const Login =()=>{
             password: Yup.string().required('Required'),
             email: Yup.string().required('Required'),
         }),
-        onSubmit: async (values) => {
+        onSubmit: async (e,values) => {
             // alert(JSON.stringify(values))
-            history.push("/home")
+            e.preventDefault();
+            const formdata = Object.fromEntries(new FormData(e.target));
+            onConnect(formdata.username, "persistent" in formdata);
+            console.log("formdata",formdata)
+            console.log("values",values)
         },
 
     });
